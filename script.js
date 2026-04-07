@@ -231,3 +231,12 @@ document.querySelectorAll('.error-state strong').forEach(el => {
         searchForm.dispatchEvent(new Event('submit'));
     });
 });
+
+// ─── REGISTRO DEL SERVICE WORKER (PWA) ────────────────────────────────────────
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(() => console.log('[VENBUSCA] Service Worker activo ✓'))
+            .catch(err => console.log('[VENBUSCA] Error al registrar SW:', err));
+    });
+}
