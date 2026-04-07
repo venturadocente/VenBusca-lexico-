@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Léxico Inteligente | Diccionario Contextual</title>
+    <meta name="description"
+        content="Busca palabras desconocidas, tecnicismos o términos incomprensibles. Encuentra el sinónimo, el concepto puntual y un ejemplo concreto de la vida real.">
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-book-journal-whills"></i>
+                <h1>VEN<span>BUSCA</span></h1>
+            </div>
+            <p class="subtitle">Descubre el significado, sinónimos y ejemplos reales de cualquier palabra técnica o
+                desconocida.</p>
+        </header>
+
+        <section class="search-section">
+            <form id="search-form" class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Ej. pragmático, resiliencia, algoritmo..."
+                    autocomplete="off" required>
+                <button type="submit" class="search-btn">
+                    <span>Definir</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading-container hidden">
+            <div class="spinner"></div>
+            <p>Analizando la palabra...</p>
+        </div>
+
+        <!-- Result Section -->
+        <section id="result-container" class="result-card hidden">
+            <div class="word-header">
+                <h2 id="word-title">Palabra</h2>
+                <button class="audio-btn" title="Escuchar pronunciación" id="audio-btn" aria-label="Escuchar">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+
+            <div class="content-grid">
+                <!-- Concepto -->
+                <div class="info-block concept-block">
+                    <div class="block-title">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Concepto Puntual</h3>
+                    </div>
+                    <p id="word-concept">Aquí aparecerá el concepto puntual y directo.</p>
+                </div>
+
+                <!-- Sinónimos -->
+                <div class="info-block synonyms-block">
+                    <div class="block-title">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h3>Sinónimos</h3>
+                    </div>
+                    <div class="tags-container" id="word-synonyms">
+                        <!-- Tags generados por JS -->
+                    </div>
+                </div>
+
+                <!-- Ejemplo en la Vida Real -->
+                <div class="info-block example-block full-width">
+                    <div class="block-title">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <h3>Ejemplo de la Vida Real</h3>
+                    </div>
+                    <div class="example-quote">
+                        <p id="word-example">El ejemplo concreto estructurado se cargará aquí mostrando el contexto de
+                            la palabra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Error / Not found -->
+        <section id="error-container" class="error-state hidden">
+            <div class="error-icon">
+                <i class="fa-solid fa-ghost"></i>
+            </div>
+            <h3>Palabra no encontrada</h3>
+            <p>Aún no tenemos este término en nuestro léxico inactivo. Prueba con palabras como: <strong>resiliencia,
+                    heurística, mitigar, idiosincrasia</strong>.</p>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Potenciado por IA para enriquecer tu vocabulario activo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
