@@ -1,0 +1,25 @@
+{
+  "name": "VENBUSCA",
+  "short_name": "VENBUSCA",
+  "description": "Descubre el significado, sinónimos y ejemplos reales de cualquier palabra técnica o desconocida.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "lang": "es",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./icono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icono.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
